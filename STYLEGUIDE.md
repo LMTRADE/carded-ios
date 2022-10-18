@@ -1,13 +1,13 @@
-# Stripe iOS Objective-C Style Guide
-
+# Carded iOS Objective-C Style Guide
+        
 ## Ground Rules
-
+        
 ### Spacing
-
+        
 - Indent using 4 spaces. No tabs.
-
+        
 - Avoid starting methods with an empty line
-
+        
 - There should not be a need to use multiple consecutive empty lines
 
 - Asterisks should be attached to the variable name `NSString *text` unless it's `NSString * const Text`
@@ -18,7 +18,7 @@
 
 - Avoid single letter variables. Try using `idx` / `jdx` instead of `i` / `j` in for loops.
 
-- Acronyms should be all lowercase as a method prefix (ex:`url` or `urlString`). Otherwise, they should be all caps when occurring elsewhere in the method name, or as a class name (ex: `handleStripeURLCallbackWithURL` or `STPAPIClient`)
+- Acronyms should be all lowercase as a method prefix (ex:`url` or `urlString`). Otherwise, they should be all caps when occurring elsewhere in the method name, or as a class name (ex: `handlecardedURLCallbackWithURL` or `STPAPIClient`)
 
 - Internal or private methods and ivars should begin with an `_`, e.g. `- (void)_doPrivateStuff` and `id _internalVariable`. This is not required for private properties which should not include an underscore (this is to distinguish them from their underlying variable which automatically has an `_` prefix).
 
@@ -101,31 +101,31 @@ static const CGFloat ButtonHeight = 100.0;
 
 - Any public static constants should be prefixed with `STP`:
 
-```objc
+```objc               
 static NSString * const STPSDKVersion = @"11.0.0";
-```
-
-### Folders
-
+```                   
+                      
+### Folders           
+                                                
 - We use flat folder structure on disk with some exceptions
-
+                                                
 - Save files to the appropriate root level folder. Typical folders include:
-  - `stripe-ios/Stripe/`
-  - `stripe-ios/Tests/Tests/`
-  - `stripe-ios/Example/Basic Integration/Basic Integration/`
-  - `stripe-ios/Example/Non-Card Payment Examples/Non-Card Payment Examples/`
-
-- Save public header files in `stripe-ios/Stripe/PublicHeaders/` for Cocoapods and Swift Package Manager compatibility
-
-## Design Patterns
-
-### Imports
-
-- Ordering for imports in headers
-  - Import system frameworks
+  - `carded-ios/carded/`                        
+  - `carded-ios/Tests/Tests/`                   
+  - `carded-ios/Example/Basic Integration/Basic Integration/`
+  - `carded-ios/Example/Non-Card Payment Examples/Non-Card Payment Examples/`
+                                                
+- Save public header files in `carded-ios/carded/PublicHeaders/` for Cocoapods and Swift Package Manager compatibility
+                                                
+## Design Patterns                              
+                                                
+### Imports                                     
+                                                
+- Ordering for imports in headers               
+  - Import system frameworks                    
   - Import superclasses and protocols sorted alphabetically
-  - Use `@class` for everything else
-
+  - Use `@class` for everything else            
+                                                
 ```objc
 #import <Foundation/Foundation.h>
 
@@ -139,24 +139,24 @@ static NSString * const STPSDKVersion = @"11.0.0";
   - Import system frameworks
   - Import corresponding headers
   - Import everything else sorted alphabetically
-
-```objc
-#import <PassKit/PassKit.h>
-
-#import "STPSource.h"
+                            
+```objc                     
+#import <PassKit/PassKit.h> 
+                            
+#import "STPSource.h"       
 #import "STPSource+Private.h"
-
-#import "NSDictionary+Stripe.h"
-#import "STPSourceOwner.h"
+                            
+#import "NSDictionary+carded.h"
+#import "STPSourceOwner.h"  
 #import "STPSourceReceiver.h"
 #import "STPSourceRedirect.h"
 #import "STPSourceVerification.h"
-```
-
+```                         
+                            
 ### Interfaces and Protocols
-
+                            
 - Stick to Xcode default spacing for interfaces, categories, and protocols
-
+                            
 - Always define `NS_ASSUME_NON_NULL_BEGIN` / `NS_ASSUME_NON_NULL_END` in headers. `NS_ASSUME_NON_NULL_BEGIN` / `NS_ASSUME_NON_NULL_END` should also be used in implementation (`.m`) files
 
 ```objc
@@ -181,26 +181,26 @@ NS_ASSUME_NON_NULL_BEGIN
 @interface STPSource () <STPInternalAPIResponseDecodable>
 
 // ...
-
-@end
-
+                      
+@end                  
+                      
 NS_ASSUME_NON_NULL_END
-```
-
+```                   
+                      
 - Category methods on certain classes need to be prefixed with `stp_` to avoid collision:
-
-```
-// NSDictionary+Stripe.h
-
-@interface NSDictionary (Stripe)
-
+                      
+```                   
+// NSDictionary+carded.h
+                      
+@interface NSDictionary (carded)
+                      
 - (NSDictionary *)stp_jsonDictionary;
-
-@end
-```
-
+                      
+@end                  
+```                   
+                      
 - Define private properties and methods as class extensions inside the implementation. Ex: `STPSource.m`.
-
+                      
 - Define internal properties and methods as class extensions inside a `+Private.h` file. Ex: `STPSource+Private.h`.
 
 - Access private properties and methods from test classes by defining a class extension inside the test implementation:
