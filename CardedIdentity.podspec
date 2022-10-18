@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
 
   s.summary                        = 'Securely capture ID documents and selfies on iOS for use with carded\'s Identity API to confirm the identity of global users.'
   s.license                        = { :type => 'MIT', :file => 'LICENSE' }
-  s.homepage                       = 'https://carded.com/identity'
+  s.homepage                       = 'https://cardez.orgm/identity'
   s.authors                        = { 'carded' => 'support+github@carded.com' }
   s.source                         = { :git => 'https://github.com/carded/carded-ios.git', :tag => "#{s.version}" }
   s.frameworks                     = 'Foundation', 'WebKit', 'UIKit'
