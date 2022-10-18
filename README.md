@@ -1,37 +1,37 @@
-# Carded iOS SDK
-
+# Carded iOS SDK                                                                                                           
+                                                                                                                           
 [![Travis](https://img.shields.io/travis/carded/carded-ios/master.svg?style=flat)](https://travis-ci.org/carded/carded-ios)
 [![CocoaPods](https://img.shields.io/cocoapods/v/Carded.svg?style=flat)](http://cocoapods.org/?q=author%3Acarded%20name%3Acarded)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/Carded.svg?style=flat)](https://github.com/carded/carded-ios/blob/master/LICENSE)
-[![Platform](https://img.shields.io/cocoapods/p/Carded.svg?style=flat)](https://github.com/carded/carded-ios#)
-
+[![Platform](https://img.shields.io/cocoapods/p/Carded.svg?style=flat)](https://github.com/carded/carded-ios#)             
+                                                                                                                           
 The Carded iOS SDK makes it quick and easy to build an excellent payment experience in your iOS app. We provide powerful and customizable UI screens and elements that can be used out-of-the-box to collect your users' payment details. We also expose the low-level APIs that power those UIs so that you can build fully custom experiences.
-
+                                                                                                                           
 Get started with our [📚 integration guides](https://cardez.org/docs/payments/accept-a-payment?platform=ios) and [example projects](#examples), or [📘 browse the SDK reference](https://carded.dev/carded-ios/docs/index.html).
-
-Learn about our [Carded Identity iOS SDK](CardedIdentity/README.md) to verify the identity of your users on iOS.
-
+                                                                                                                           
+Learn about our [Carded Identity iOS SDK](CardedIdentity/README.md) to verify the identity of your users on iOS.           
+                                        
 > Updating to a newer version of the SDK? See our [migration guide](https://github.com/carded/carded-ios/blob/master/MIGRATING.md) and [changelog](https://github.com/carded/carded-ios/blob/master/CHANGELOG.md).
-
-Table of contents
-=================
-
-<!--ts-->
-   * [Features](#features)
-   * [Releases](#releases)
-   * [Requirements](#requirements)
+                                        
+Table of contents                       
+=================                       
+                                        
+<!--ts-->                               
+   * [Features](#features)              
+   * [Releases](#releases)              
+   * [Requirements](#requirements)      
    * [Getting started](#getting-started)
-      * [Integration](#integration)
-      * [Examples](#examples)
-   * [Card scanning](#card-scanning)
-   * [Contributing](#contributing)
+      * [Integration](#integration)     
+      * [Examples](#examples)           
+   * [Card scanning](#card-scanning)    
+   * [Contributing](#contributing)      
    * [Migrating](#migrating-from-older-versions)
-   * [Licenses](#licenses)
-
-<!--te-->
-
-## Features
+   * [Licenses](#licenses)              
+                                        
+<!--te-->                               
+                                        
+## Features                             
 
 **Simplified security**: We make it simple for you to collect sensitive data such as credit card numbers and remain [PCI compliant](https://cardez.org/docs/security#pci-dss-guidelines). This means the sensitive data is sent directly to Carded instead of passing through your server. For more information, see our [integration security guide](https://cardez.org/docs/security).
 
